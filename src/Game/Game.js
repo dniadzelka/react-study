@@ -49,7 +49,7 @@ export class Game extends React.Component {
             const desc = move ? `Go to move #${move}` : 'Go to game start';
 
             return (
-                <li key={move}>
+                <li key={move} className={ this.state.stepNumber === move ? 'selected' : '' }>
                     <button onClick={() => { this.handleGoToStateClick(move) }}>{desc}</button>
                 </li>
             );
